@@ -5,6 +5,14 @@ import { DemoScreen } from "../screens/demo-screen"
 export const PrimaryNavigator = createStackNavigator(
   {
     welcome: { screen: WelcomeScreen },
+  },
+  {
+    headerMode: "none",
+  },
+)
+
+export const SecondaryNavigator = createStackNavigator(
+  {
     demo: { screen: DemoScreen },
   },
   {

@@ -5,7 +5,7 @@
 import "./i18n"
 import React, { useState, useEffect } from "react"
 import { AppRegistry, YellowBox } from "react-native"
-import { StatefulNavigator, BackButtonHandler, exitRoutes } from "./navigation"
+import { Navigator, BackButtonHandler, exitRoutes } from "./navigation"
 import { StorybookUIRoot } from "../storybook"
 import { RootStore, RootStoreProvider, setupRootStore } from "./models/root-store"
 
@@ -66,7 +66,7 @@ export const App: React.FunctionComponent<{}> = () => {
 	return (
 		<RootStoreProvider value={rootStore}>
 			<BackButtonHandler canExit={canExit}>
-				<StatefulNavigator />
+				<Navigator />
 			</BackButtonHandler>
 		</RootStoreProvider>
 	)

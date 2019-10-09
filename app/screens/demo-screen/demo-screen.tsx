@@ -83,7 +83,7 @@ const HINT: TextStyle = {
 export interface DemoScreenProps extends NavigationScreenProps<{}> {}
 
 export const DemoScreen: React.FunctionComponent<DemoScreenProps> = props => {
-  const goBack = React.useMemo(() => () => props.navigation.goBack(null), [props.navigation])
+  const goBack = React.useMemo(() => () => props.navigation.navigate("welcome"), [props.navigation])
 
   const demoReactotron = React.useMemo(
     () => async () => {
